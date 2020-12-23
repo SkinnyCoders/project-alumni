@@ -1,0 +1,15 @@
+[2020-12-13 20:21:27.866] [sharedprocess] [info] main {"machineId":"ee7d32a40cb3104931a1a39ffce0f67778de089e4ff93d8b8c4c2b280dd1e15d","windowId":2}
+[2020-12-13 20:21:29.729] [sharedprocess] [info] Deleted from disk ms-toolsai.jupyter /root/.vscode/extensions/ms-toolsai.jupyter-2020.11.399280825
+[2020-12-13 20:21:37.954] [sharedprocess] [info] Installing extension: batisteo.vscode-django
+[2020-12-13 20:21:37.956] [sharedprocess] [info] Installing extension: ms-toolsai.jupyter
+[2020-12-13 20:22:07.879] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-12-13 20:37:34.581] [sharedprocess] [info] Downloaded extension: ms-toolsai.jupyter undefined
+[2020-12-13 20:37:34.655] [sharedprocess] [error] Failed to install extension: ms-toolsai.jupyter Corrupt ZIP: end of central directory record signature not found
+[2020-12-13 20:41:26.719] [sharedprocess] [info] Downloaded extension: batisteo.vscode-django undefined
+[2020-12-13 20:41:29.157] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.batisteo.vscode-django-1.0.1: batisteo.vscode-django
+[2020-12-13 20:41:29.158] [sharedprocess] [info] Renamed to /root/.vscode/extensions/batisteo.vscode-django-1.0.1
+[2020-12-13 20:41:29.158] [sharedprocess] [info] Installation completed. batisteo.vscode-django
+[2020-12-13 20:41:29.421] [sharedprocess] [info] Extensions installed successfully: batisteo.vscode-django
+[2020-12-13 20:41:31.054] [sharedprocess] [info] Installing extension: ms-toolsai.jupyter
+[2020-12-13 20:41:31.259] [sharedprocess] [info] Downloaded extension: ms-toolsai.jupyter undefined
+[2020-12-13 20:41:31.275] [sharedprocess] [error] Failed to install extension: ms-toolsai.jupyter Corrupt ZIP: end of central directory record signature not found

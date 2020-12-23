@@ -1,0 +1,3 @@
+[2020-12-06 21:38:23.417] [renderer1] [error] Network Error: Error: Network Error
+    at e.exports (/snap/code/50/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:7511)
+    at XMLHttpRequest.p.onerror (/snap/code/50/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:6478)

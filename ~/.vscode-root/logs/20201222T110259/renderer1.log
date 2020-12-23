@@ -1,0 +1,1 @@
+[2020-12-22 11:03:08.887] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/project_alumni/.vscode'
