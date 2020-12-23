@@ -1,4 +1,7 @@
 {
     "window.zoomLevel": -1,
-    "workbench.colorTheme": "Min Dark"
+    "workbench.colorTheme": "Min Dark",
+    "explorer.confirmDelete": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
