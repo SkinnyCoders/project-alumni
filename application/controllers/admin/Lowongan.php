@@ -228,6 +228,50 @@ class Lowongan extends CI_Controller
         echo json_encode($perusahaan);
     }
 
+    public function rekap1(){
+        $lowongan = $this->input->post('lowongan');
+        $status = $this->input->post('status');
+
+
+        //get loowngan
+        if(!empty($lowongan)){
+            $lowongan_q = $this->db->query("SELECT * FROM lowongan WHERE id_lowongan =".$lowongan)->row_array();
+            $lowongan_name = $lowongan_q['posisi_pekerjaan'];
+        }
+
+        if(!empty($lowongan) && !empty($status)){
+            //all 
+            $data = [
+                'header' => "Lowongan $lowongan_name dan status $status",
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND job_apply.status = '$status' ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($lowongan) ){
+            //lowongan
+            $data = [
+                'header' => 'Lowongan '.$lowongan_name,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($status)){
+            //jurusan & thn lulus
+            $data = [
+                'header' => 'Semua Lowongan dan status '.$status,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }else{
+            //kosong semua
+            $data = [
+                'header' => 'Semua Lowongan Pekerjaan',
+                'alumni' => $this->db->query('SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company ORDER BY job_apply.apply_at DESC')->result_array()
+            ];
+        }
+
+        $this->load->library('pdf');
+
+        $this->pdf->setPaper('A4', 'landscape');
+        $this->pdf->filename = "rekap_data_pelamar.pdf";
+        $this->pdf->load_view('v_admin/v_laporan_pelamar', $data);
+    }
+
     public function provinsi(){
         $curl = curl_init();
 

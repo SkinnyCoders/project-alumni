@@ -30,6 +30,7 @@
                               <h3 class="card-title"><i class="far fa-dollar"></i> Tabel Daftar Lowongan Pekerjaan</h3>
                               <a class="btn btn-sm btn-primary float-right ml-3" href="<?= base_url('admin/lowongan/tambah') ?>"><i class="fa fa-plus"></i> Tambah Lowongan</a>
                               <a class="btn btn-sm btn-success float-right ml-3" href="<?= base_url('admin/lowongan/verifikasi') ?>"><i class="fa fa-check"></i> Verifikasi Lowongan</a>
+                              <a class="btn btn-sm btn-success float-right ml-3" data-toggle="modal" data-target="#modal-rekap" href="javascript:void(0)"><i class="fa fa-download"></i> Download Rekap Pelamar</a>
                           </div>
                           <!-- /.card-header -->
                           <!-- form start -->
@@ -109,7 +110,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="kelas">Gaji Perbulan <span class="text-danger">*</span></label>
-                        <input type="number" class="form-control" name="gaji" id="gaji" placeholder="Masukkan gaji perbulan" value="<?php echo set_value('gaji'); ?>">
+                        <input type="number" class="form-control" min="1" name="gaji" id="gaji" placeholder="Masukkan gaji perbulan" value="<?php echo set_value('gaji'); ?>">
                         <small class="text-danger mt-2"><?= form_error('gaji') ?></small>
                       </div>
                     </div>
@@ -196,6 +197,46 @@
                <!-- /.modal-dialog -->
              </div>
              <!-- /.modal -->
+
+             <div class="modal fade" id="modal-rekap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Download Laporan Pelamar</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="<?=base_url()?>admin/lowongan/rekap1" method="post">
+                                <div class="form-group">
+                                    <label for="">Lowongan</label>
+                                    <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Lowongan (Kosongkan Jika ingin semua jurusan)" id="">
+                                        <option></option>
+                                        <?php
+                                        foreach($lowongans AS $j){
+                                            echo '<option value="'.$j['id_lowongan'].'">'.ucwords($j['posisi_pekerjaan']).'</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Status Lamaran</label>
+                                    <select name="status" class="form-control select2bs4" data-placeholder="Pilih Status (Kosongkan Jika ingin semua jurusan)" id="">
+                                        <option></option>
+                                        <option value="terima">Diterima</option>
+                                        <option value="tolak">Ditolak</option>
+                                        <option value="pending">Pending</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="download" class="btn btn-success btn-block">Download Laporan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
       </section>
   </div>

@@ -98,7 +98,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label for="kelas">Gaji Perbulan <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control" name="gaji" id="gaji" placeholder="Masukkan gaji perbulan" value="<?php echo set_value('gaji'); ?>">
+                            <input type="number" class="form-control" min="1" name="gaji" id="gaji" placeholder="Masukkan gaji perbulan" value="<?php echo set_value('gaji'); ?>">
                             <small class="text-danger mt-2"><?= form_error('gaji') ?></small>
                           </div>
                         </div>
