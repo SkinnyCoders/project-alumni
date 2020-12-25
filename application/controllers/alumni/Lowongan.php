@@ -23,6 +23,7 @@ class Lowongan extends CI_controller
 		$slug = $this->uri->segment(4);
 		$data['title'] = 'Lowongan Kerja';
 		$data['lowongan'] = $this->m_alumni->getLowonganDetail($slug);
+		$data['cek_detail'] = $this->db->query("SELECT * FROM `job_apply` JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan WHERE lowongan.slug = '$slug' AND job_apply.nisn = ".$this->session->userdata('nisn'))->num_rows();
 
 		if(!empty($data['lowongan'])){
 			getViews($data, 'v_alumni/v_lowongan_detail');

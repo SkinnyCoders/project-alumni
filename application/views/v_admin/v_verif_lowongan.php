@@ -44,13 +44,14 @@
                                  <th class="text-nowrap">Deskripsi</th>
                                  <th class="text-nowrap">Berakhir</th>
                                  <th class="text-nowrap">Status</th>
-                                 <th style="width: 10%">Aksi</th>
+                                 <th style="width: 12%">Aksi</th>
                                </tr>
                              </thead>
                              <tbody>
                               <?php 
                               $no = 1;
                               foreach ($lowongans as $lowongan) :
+              
                                 switch($lowongan['status']){
                                     case "cancel":
                                         $disabled_cancel = "disabled";
@@ -61,6 +62,13 @@
                                         $disabled_cancel = "";
                                         $disabled_verif = "disabled";
                                     break;
+
+                                    case "pending":
+                                      $disabled_cancel = "";
+                                      $disabled_verif = "";
+                                  break;
+
+                                  
                                 }
                               ?>
                               <tr>
@@ -73,7 +81,7 @@
                                 <td><label for=""><?=ucwords($lowongan['status'])?></label></td>
                                 <td>
                                 <a href="javascript:void(0)" id="<?=$lowongan['id_lowongan']?>" class="btn btn-sm btn-success verifikasi <?=$disabled_verif?>"><i class="fa fa-check"></i></a>
-                                <a href="javascript:void(0)" id="<?=$lowongan['id_lowongan']?>" class="btn btn-sm btn-danger mr-2 cancel <?=$disabled_cancel?>"><i class="fa fa-times"></i></a>
+                                <a href="javascript:void(0)" id="<?=$lowongan['id_lowongan']?>" class="btn btn-sm btn-danger cancel <?=$disabled_cancel?>"><i class="fa fa-times"></i></a>
                                 <a href="javascript:void(0)" id="<?=$lowongan['id_lowongan']?>" class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></a></td>
                               </tr>
                               <?php 

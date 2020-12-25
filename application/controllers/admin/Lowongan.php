@@ -202,7 +202,7 @@ class Lowongan extends CI_Controller
     public function verifikasi(){
         $data = [
             'title' => 'Daftar Lowongan Pekerjaan',
-            'lowongans' => $this->db->query("SELECT * FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.status != 'verifikasi' ORDER BY lowongan.create_at DESC")->result_array()
+            'lowongans' => $this->db->query("SELECT lowongan.*, company.nama FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.status != 'verifikasi' ORDER BY lowongan.create_at DESC")->result_array()
         ];
 
     	getViews($data, 'v_admin/v_verif_lowongan');

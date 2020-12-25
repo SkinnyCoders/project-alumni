@@ -65,7 +65,16 @@
             </div>
             </div>
             <hr>
-            <a href="javascript:void(0)" data-toggle="modal" id="<?=$lowongan['id_lowongan']?>" data-target="#modal-lg" class="btn btn-success">Daftar Sekarang</a>
+            <?php
+            if($cek_detail > 0){
+              $disabled = 'disabled';
+              $msg = "Anda Sudah Mendaftar";
+            }else{
+              $disabled = '';
+              $msg = "Daftar Sekarang";
+            }
+            ?>
+            <a href="javascript:void(0)" data-toggle="modal" id="<?=$lowongan['id_lowongan']?>" data-target="#modal-lg" class="btn btn-success <?=$disabled?>"><?=$msg?></a>
             <!-- /.row -->
 
             <!-- this row will not appear when printing -->
