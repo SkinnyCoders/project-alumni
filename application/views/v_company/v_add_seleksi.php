@@ -51,7 +51,7 @@
                               <i class="text-bold">%</i>
                             </span>
                           </div>
-                          <input type="number" name="bobot" class="form-control float-right" placeholder="Prosentase Bobot lulus">
+                          <input type="number" name="bobot" min="1" class="form-control float-right" placeholder="Prosentase Bobot lulus">
                         </div>
                         <!-- /.input group -->
                         <small class="text-danger mt-2"><?= form_error('tgl') ?></small>

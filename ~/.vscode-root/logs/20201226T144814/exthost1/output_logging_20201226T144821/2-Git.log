@@ -248,3 +248,47 @@ fatal: no upstream configured for branch 'master'
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_pelamar.php
+> git symbolic-ref --short HEAD
+> git cat-file -s 98690c2a8f4273c78034177c1e6a17c2da8864f4
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git show --textconv :application/views/v_company/v_pelamar.php
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_pelamar.php
+> git config --get commit.template
+> git cat-file -s 98690c2a8f4273c78034177c1e6a17c2da8864f4
+> git show --textconv :application/views/v_company/v_pelamar.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_company/v_seleksi.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_seleksi.php
+> git cat-file -s 55bd5a0b57832c2453aed966d3b4f2fff9d72688
+> git show --textconv :application/views/v_company/v_add_seleksi.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_add_seleksi.php
+> git cat-file -s adaf1b921a1d67e6cd529ed14dec9fce532b3542
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
