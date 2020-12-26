@@ -191,7 +191,7 @@ class Lowongan extends CI_Controller
         }else{
             $data = [
                 'title' => 'Daftar Pelamar',
-                'datas' => $this->db->query("SELECT job_apply.*, job_apply.status AS status_pelamar, alumni.*, jurusan.nama_jurusan FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan WHERE job_apply.id_lowongan =".$id)->result_array()
+                'datas' => $this->db->query("SELECT job_apply.*, job_apply.status AS status_pelamar, alumni.*, jurusan.nama_jurusan FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan WHERE job_apply.id_lowongan =".$id)->result_array()
             ];
     
             getViews($data, 'v_company/v_pelamar');

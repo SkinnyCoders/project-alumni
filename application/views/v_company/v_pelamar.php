@@ -68,8 +68,8 @@
                                 <td><img class="brand-image" style="width: 50px; height: 50px; border-radius: 5%" src="<?= base_url('assets/img/user/' . $lowongan['foto']) ?>"></td>
                                 <td><?=ucwords($lowongan['nisn'])?> - <?=ucwords($lowongan['nama'])?></td>
                                 <td><?=$gender?></td>
-                                <td><?= ucwords($lowongan['nama_jurusan'])?></td>
-                                <td><?= DateTime::createFromFormat('Y-m-d', $lowongan['tanggal_lahir'])->format('d F Y') ?></td>
+                                <td><?= !empty($lowongan['nama_jurusan'])?ucwords($lowongan['nama_jurusan']):"Kosong"?></td>
+                                <td><?= !empty($lowongan['tanggal_lahir'])?DateTime::createFromFormat('Y-m-d', $lowongan['tanggal_lahir'])->format('d F Y'):"Kosong" ?></td>
                                 <td><label for=""><?=ucwords($lowongan['status_pelamar'])?></label></td>
                                 <td>
                                 <a href="<?=base_url()?>perusahaan/lowongan/detail/<?=$lowongan['id_job_apply']?>" class="btn btn-sm btn-success">Tinjau</a>

@@ -70,17 +70,20 @@
                             break;
                         }
 
-                        if($id_tes['id_tes'] !== NULL){
+                        if($id_tes !== NULL){
                           $id_tes = $id_tes['id_tes'];
+                          if($cek_tes > 0){
+                            $disabled_tes = 'disabled';
+                          }else{
+                            if($status_berkas['status'] == 'pending'){
+                              $disabled_tes = 'disabled';
+                            }else{
+                              $disabled_tes = '';
+                            }
+                          }
                         }else{
                           $status_seleksi = "fa-check bg-success";
                           $disabled_tes = 'disabled';
-                        }
-
-                        if($cek_tes > 0){
-                          $disabled_tes = 'disabled';
-                        }else{
-                          $disabled_tes = '';
                         }
 
                         if($status_tes !== NULL){
