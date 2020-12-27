@@ -17,7 +17,7 @@ class Managemen_test extends CI_Controller
     {
         $data = [
             "title" => "Daftar Soal Test Seleksi",
-            "seleksi" => $this->m_seleksi->getAll()
+            "seleksi" => $this->db->get_where('tes_seleksi', ['id_company' => $this->session->userdata('id_perusahaan')])->result_array()
         ];
 
         getViews($data,'v_company/v_seleksi');
@@ -37,7 +37,8 @@ class Managemen_test extends CI_Controller
             $data = [
                 'nama_tes_seleksi' => $this->input->post('nama', true),
                 'deskripsi_tes_seleksi' => $this->input->post('deskripsi', true),
-                'bobot_tes' => $this->input->post('bobot')
+                'bobot_tes' => $this->input->post('bobot'),
+                'id_company' => $this->session->userdata('id_perusahaan')
             ];
 
             $insert = $this->m_seleksi->add_seleksi($data);
@@ -195,7 +196,7 @@ class Managemen_test extends CI_Controller
     public function konfigurasi(){
         $data = [
             'title' => 'Konfigurasi Tes Seleksi',
-            'tes' => $this->db->get('tes_seleksi')->result_array()
+            'tes' => $this->db->get_where('tes_seleksi', ['id_company' => $this->session->userdata('id_perusahaan')])->result_array()
         ];
 
         $this->form_validation->set_rules('tes', 'Tes Seleksi', 'required', ['required' => '{field} tidak boleh kosong']);

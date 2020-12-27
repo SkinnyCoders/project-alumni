@@ -62,7 +62,7 @@
                                     //get postingan
                                     switch($k['kategori']){
                                         case 'lowongan':
-                                            $getPost = $this->db->get_where('lowongan', ['id_lowongan' => $k['id_berita']])->row_array();
+                                            $getPost = $this->db->query("SELECT lowongan.*, company.nama AS perusahaan FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = ".$k['id_berita'])->row_array();
                                             $postKategori = 'Lowongan Kerja';
                                             $postJudul = $getPost['posisi_pekerjaan'].' '.$getPost['perusahaan'];
                                             $link = base_url('lowongan/detail/'.$getPost['slug']);

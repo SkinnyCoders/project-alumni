@@ -137,7 +137,7 @@
                                     <div class="timeline-item">
                                     <!-- <span class="time"><i class="far fa-clock"></i> 5 mins ago</span> -->
 
-                                    <h3 class="timeline-header"><a href="#">Tes Seleksi</a> accepted your friend request
+                                    <h3 class="timeline-header"><a href="#">Tes Seleksi</a>
                                     </h3>
                                     <div class="timeline-body">
                                         Ikuti tes yang telah ditentukan

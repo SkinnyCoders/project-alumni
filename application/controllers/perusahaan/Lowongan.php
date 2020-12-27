@@ -201,9 +201,9 @@ class Lowongan extends CI_Controller
     public function detail($id_job_apply){
         $data = [
             'title' => "Detail Pelamar",
-            'alumni' => $this->db->query("SELECT alumni.*, jurusan.*, job_apply.* FROM `alumni` JOIN job_apply ON job_apply.nisn=alumni.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan WHERE job_apply.id_job_apply =".$id_job_apply)->row_array()
+            'alumni' => $this->db->query("SELECT alumni.*, jurusan.*, job_apply.* FROM `alumni` JOIN job_apply ON job_apply.nisn=alumni.nisn LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan WHERE job_apply.id_job_apply =".$id_job_apply)->row_array()
         ];
-
+        
         $nisn = $data['alumni']['nisn'];
 
         $data['hasil_tes'] = $this->db->query("SELECT * FROM hasil_tes_seleksi JOIN tes_seleksi ON tes_seleksi.id_tes_seleksi=hasil_tes_seleksi.id_tes_seleksi WHERE nisn =".$nisn)->result_array();

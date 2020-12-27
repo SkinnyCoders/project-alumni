@@ -292,3 +292,22 @@ fatal: no upstream configured for branch 'master'
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_add_seleksi.php
+> git cat-file -s b3481ea4790cecf1dfd55ba3cb8ff15a8a38668c
+> git symbolic-ref --short HEAD
+> git show --textconv :application/views/v_company/v_add_seleksi.php
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
