@@ -20,7 +20,6 @@ class Alumni extends CI_controller
             'jurusan' => $this->db->get('jurusan')->result_array(),
             'alumnis' => $this->m_alumni->getAllAlumni()
         ];
-
         getViews($data, 'v_admin/v_daftar_alumni');
     }
 

@@ -1,0 +1,694 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /opt/lampp/htdocs/project_alumni
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_alumni/v_status_lamaran.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_alumni/v_status_lamaran.php
+> git cat-file -s c44f342a40abfc550bd50155da60d7b0892df3cd
+> git check-ignore -v -z --stdin
+> git show --textconv :application/controllers/perusahaan/Managemen_test.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Managemen_test.php
+> git cat-file -s 3ff58a34cbce6e18c3982d2c58db6efe544956df
+> git check-ignore -v -z --stdin
+> git show --textconv :application/views/v_company/v_konfigurasi_tes.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_konfigurasi_tes.php
+> git cat-file -s e2c1a625c4a097ee5b9c1e3adef43293d0dfb139
+> git show --textconv :application/controllers/perusahaan/Managemen_test.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Managemen_test.php
+> git cat-file -s 3ff58a34cbce6e18c3982d2c58db6efe544956df
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_company/v_konfigurasi_tes.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_company/v_konfigurasi_tes.php
+> git cat-file -s e2c1a625c4a097ee5b9c1e3adef43293d0dfb139
+> git check-ignore -v -z --stdin
+> git show --textconv :application/controllers/perusahaan/Managemen_test.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Managemen_test.php
+> git cat-file -s 3ff58a34cbce6e18c3982d2c58db6efe544956df
+> git show --textconv :application/models/M_seleksi.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/models/M_seleksi.php
+> git cat-file -s 85ccbfbe8a833aedcea0273bed57e12a4775b1e8
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/perusahaan/Managemen_test.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Managemen_test.php
+> git cat-file -s 3ff58a34cbce6e18c3982d2c58db6efe544956df
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Login.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Login.php
+> git cat-file -s 91caf5b52d3d0458366ceeb73d2f5d15db64b74e
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Auth.php
+> git cat-file -s 59b899c159fae3fbda3941fa35d099bfeedaf0f3
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :application/views/v_home/v_home.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_home.php
+> git cat-file -s e53dce068fc6276b08c75146ee6b551bb2070cec
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git show --textconv :application/controllers/front/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Auth.php
+> git cat-file -s 59b899c159fae3fbda3941fa35d099bfeedaf0f3
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git show --textconv :application/controllers/front/Lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Lowongan.php
+> git cat-file -s a10ae4c89547855022c2314865c0f8f8597577e9
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git show --textconv :application/views/v_home/v_list_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_list_event.php
+> git cat-file -s a5354e6c85bff7301f7c0e0f3d8659f59102cf90
+> git show --textconv :application/views/v_home/v_home.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_home.php
+> git cat-file -s e53dce068fc6276b08c75146ee6b551bb2070cec
+> git show --textconv :application/views/v_home/v_detail_lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_detail_lowongan.php
+> git cat-file -s f420f3e595287420584a7620ac82682ab56d1145
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_detail_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_detail_event.php
+> git cat-file -s ef313dc6fb2bcb30b8f9b5a36316dfaadb546240
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_list_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_list_event.php
+> git cat-file -s a5354e6c85bff7301f7c0e0f3d8659f59102cf90
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_list_lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_list_lowongan.php
+> git cat-file -s 8a7c962a67c6bf277b4fed3d7b028a5db46fa2c0
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_detail_lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_detail_lowongan.php
+> git cat-file -s f420f3e595287420584a7620ac82682ab56d1145
+> git show --textconv :application/controllers/perusahaan/Managemen_test.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Managemen_test.php
+> git cat-file -s 3ff58a34cbce6e18c3982d2c58db6efe544956df
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git show --textconv :application/models/M_auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/models/M_auth.php
+> git cat-file -s 20d59dbc4a1c62879f30b18e5a7fc551081d0104
+> git show --textconv :application/controllers/perusahaan/Auth.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/perusahaan/Auth.php
+> git cat-file -s 9b72894fa5fdf1a25db3055af991d0bb15f7268d
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_detail_lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_detail_lowongan.php
+> git cat-file -s f420f3e595287420584a7620ac82682ab56d1145
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_home/v_detail_lowongan.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_home/v_detail_lowongan.php
+> git cat-file -s f420f3e595287420584a7620ac82682ab56d1145
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/front/Koment.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/front/Koment.php
+> git cat-file -s 5c2860b7818b88f1f2657a81684a42abd794f8d7
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_list_komentar.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_list_komentar.php
+> git cat-file -s d0ae03d21ac8e0b8ffede7741653c548f908bfd3
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git show --textconv :application/views/v_admin/v_laporan_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_event.php
+> git cat-file -s 9ff7c98299ee55bbcdd13ba389f3428e81db3f60
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_event.php
+> git cat-file -s 9ff7c98299ee55bbcdd13ba389f3428e81db3f60
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/admin/Alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/admin/Alumni.php
+> git cat-file -s 183e98d9fc9f0cd6be7b9ce37a3319d3752135ad
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_event.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_event.php
+> git cat-file -s 9ff7c98299ee55bbcdd13ba389f3428e81db3f60
+> git show --textconv :application/controllers/admin/Alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/admin/Alumni.php
+> git cat-file -s 183e98d9fc9f0cd6be7b9ce37a3319d3752135ad
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/controllers/admin/Alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/admin/Alumni.php
+> git cat-file -s 183e98d9fc9f0cd6be7b9ce37a3319d3752135ad
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_pelamar.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_pelamar.php
+> git cat-file -s add4b82c0a271b58fa16d828e9d49f7723c46150
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s c9801621aad21369cad499d69ef305943d44296f
+> git show --textconv :application/views/v_admin/v_laporan_pelamar.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_pelamar.php
+> git cat-file -s add4b82c0a271b58fa16d828e9d49f7723c46150
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template

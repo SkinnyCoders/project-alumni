@@ -18,6 +18,7 @@ class Koment extends CI_controller
             redirect('/');
             return false;
         }else{
+          
             switch($this->session->userdata('nama_role')){
                 case 'Admin' :
                     $author = $this->session->userdata('username');
@@ -29,6 +30,13 @@ class Koment extends CI_controller
                 case 'Alumni' :
                     $author = $this->session->userdata('nisn');
                     $oleh = 'alumni';
+                    $id_parent =  $this->input->post('komentar_id');
+                    $komen = $this->input->post('komentar');
+                break;
+
+                case 'perusahaan' :
+                    $author = $this->session->userdata('id_member');
+                    $oleh = 'perusahaan';
                     $id_parent =  $this->input->post('komentar_id');
                     $komen = $this->input->post('komentar');
                 break;
@@ -70,26 +78,26 @@ class Koment extends CI_controller
 
         $koment2 = $this->db->query("SELECT komentar.*, admin.nama, admin.foto FROM `komentar` JOIN kategori_komentar ON kategori_komentar.id_komentar=komentar.id_komentar JOIN admin ON admin.username=komentar.author WHERE kategori_komentar.id_berita = $id_berita AND kategori_komentar.kategori = '$kategori' AND komentar.id_parent_komentar = 0 ORDER BY komentar.`id_komentar` DESC")->result_array();
 
-        // function sort_by_col(&$src_array, $kolom, $arah = SORT_ASC) {
-        //     $urut = array();
-        //     foreach ($src_array as $k => $v) {
-        //         $urut[$k] = $v[$kolom];
-        //     }
-        //     array_multisort($urut, $arah, $src_array);
-        // }
+        $koment3 = $this->db->query("SELECT komentar.*, company_member.nama, company_member.foto FROM `komentar` JOIN kategori_komentar ON kategori_komentar.id_komentar=komentar.id_komentar JOIN company_member ON company_member.id_member=komentar.author WHERE kategori_komentar.id_berita = $id_berita AND kategori_komentar.kategori = '$kategori' AND komentar.id_parent_komentar = 0 ORDER BY komentar.`id_komentar` DESC")->result_array();
 
-        $koment = array_merge($koment1, $koment2);
+        $koment = array_merge($koment1, $koment2, $koment3);
         $this->sort_by_col($koment, 'tanggal', SORT_DESC);
 
         $output = '';
         foreach($koment AS $k){
             $tgl = DateTime::createFromFormat('Y-m-d H:i:s', $k['tanggal'])->format('d F Y');
             $waktu = DateTime::createFromFormat('Y-m-d H:i:s', $k['tanggal'])->format('H:i');
+
+            if(!empty($k['foto'])){
+                $foto = $k['foto'];
+            }else{
+                $foto = 'default.png';
+            }
             $output .= '<div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="user-panel d-flex">
                     <div class="image">
-                        <img src="'.base_url('assets/img/user/'.$k['foto'].'').'" style="width:70px; height:70px;" class="rounded-circle elevation-2 mt-2" alt="User Image">
+                        <img src="'.base_url('assets/img/user/'.$foto.'').'" style="width:70px; height:70px;" class="rounded-circle elevation-2 mt-2" alt="User Image">
                     </div>
                     <div class="info">
                         <h5 class="text-nowrap d-block ml-3 mt-1 text-header text-black">'.$k['nama'].' <span><small class="text-muted">~ '.$tgl.' at '.$waktu.'</small></span></h5>
@@ -112,7 +120,9 @@ class Koment extends CI_controller
 
         $parent2 = $this->db->query("SELECT komentar.*, admin.nama, admin.foto FROM `komentar` JOIN kategori_komentar ON kategori_komentar.id_komentar=komentar.id_komentar JOIN admin ON admin.username=komentar.author WHERE komentar.id_parent_komentar = $id_komen ORDER BY komentar.`id_komentar` DESC")->result_array();
 
-        $parent = array_merge($parent1, $parent2);
+        $parent3 = $this->db->query("SELECT komentar.*, company_member.nama, company_member.foto FROM `komentar` JOIN kategori_komentar ON kategori_komentar.id_komentar=komentar.id_komentar JOIN company_member ON company_member.id_member=komentar.author WHERE komentar.id_parent_komentar = $id_komen ORDER BY komentar.`id_komentar` DESC")->result_array();
+
+        $parent = array_merge($parent1, $parent2, $parent3);
         $this->sort_by_col($parent, 'tanggal', SORT_DESC);
 
         $row = count($parent);

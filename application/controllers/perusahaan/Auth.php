@@ -28,6 +28,7 @@ class Auth extends CI_controller
                 if (password_verify($this->input->post('password'), $user['password'])) {
                     $data = [
                         'id_perusahaan' => $user['id_company'],
+                        'id_member' => $user['id_member'],
                         'is_login' => 'punten',
                         'nama' => $user['nama'],
                         'username' => $user['username'],

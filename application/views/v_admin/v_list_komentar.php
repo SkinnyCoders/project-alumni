@@ -57,6 +57,10 @@
                                         case 'alumni':
                                             $getAuthor = $this->db->get_where('alumni', ['nisn' => $k['author']])->row_array();
                                         break;
+
+                                        case 'perusahaan':
+                                          $getAuthor = $this->db->get_where('company_member', ['id_member' => $k['author']])->row_array();
+                                          break;
                                     }
 
                                     //get postingan

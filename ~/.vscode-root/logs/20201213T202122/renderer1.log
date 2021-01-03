@@ -1,6 +1,0 @@
-[2020-12-13 20:37:34.719] [renderer1] [error] Corrupt ZIP: end of central directory record signature not found: validating: Corrupt ZIP: end of central directory record signature not found
-    at U.downloadInstallableExtension (file:///snap/code/50/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:628:799)
-    at async U.doInstallFromGallery (file:///snap/code/50/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:626:19)
-[2020-12-13 20:41:31.285] [renderer1] [error] Corrupt ZIP: end of central directory record signature not found: validating: Corrupt ZIP: end of central directory record signature not found
-    at U.downloadInstallableExtension (file:///snap/code/50/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:628:799)
-    at async U.doInstallFromGallery (file:///snap/code/50/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:626:19)

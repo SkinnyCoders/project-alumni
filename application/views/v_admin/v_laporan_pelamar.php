@@ -30,6 +30,11 @@ $project = explode('/', $_SERVER['REQUEST_URI'])[1];
     .table-me tbody{
       border-bottom: 2px solid #eaeaea !important;
     }
+
+    .hormat{
+      float: right;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -130,6 +135,14 @@ $project = explode('/', $_SERVER['REQUEST_URI'])[1];
 
         </tbody>   
       </table>
+    </div>
+    <div class="hormat">
+      <?php
+      $admin = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+      ?>
+      <p style="margin-left: 0px;"><?=DateTime::createFromFormat('Y-m-d',  date("Y-m-d"))->format('d F Y')?></p>
+      <p style="margin-top: 60px;"><?=ucwords($admin['nama'])?></p>
+      <p>                       </p>
     </div>
    </div>
 </body>

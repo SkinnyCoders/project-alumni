@@ -46,7 +46,7 @@ class M_seleksi extends CI_Model
         return $this->db->get()->result_array();
     }
 
-    public function getTesKonfig($id){
-        return $this->db->query("SELECT * FROM `lowongan` WHERE NOT EXISTS (SELECT * FROM konfigurasi_tes_seleksi WHERE konfigurasi_tes_seleksi.id_lowongan=lowongan.id_lowongan AND konfigurasi_tes_seleksi.id_tes_seleksi = $id)")->result_array();
+    public function getTesKonfig($id, $id_company){
+        return $this->db->query("SELECT * FROM `lowongan` WHERE lowongan.id_company = $id_company AND NOT EXISTS (SELECT * FROM konfigurasi_tes_seleksi WHERE konfigurasi_tes_seleksi.id_lowongan=lowongan.id_lowongan AND konfigurasi_tes_seleksi.id_tes_seleksi = $id)")->result_array();
     }
 }

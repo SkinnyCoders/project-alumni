@@ -125,6 +125,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <?php if($this->session->userdata('is_login') && $this->session->userdata('is_login') == 'punten' ){
                 if($this->session->userdata('nama_role') == 'Alumni'){
                     echo '<a class="user" href="'.base_url().'alumni/dashboard"> Dashboard <i class="fa fa-arrow-right"></i></a>';
+                }elseif($this->session->userdata('nama_role') == 'perusahaan'){
+                    echo '<a class="user" href="'.base_url().'perusahaan/dashboard"> Dashboard <i class="fa fa-arrow-right"></i></a>';
                 }else{
                     echo '<a class="user" href="'.base_url().'admin/dashboard"> Dashboard <i class="fa fa-arrow-right"></i></a>';
                 }

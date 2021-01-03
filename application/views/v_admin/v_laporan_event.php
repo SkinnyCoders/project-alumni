@@ -26,6 +26,11 @@
     .table-me tbody{
       border-bottom: 2px solid #eaeaea !important;
     }
+
+    .hormat{
+      float: right;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -83,6 +88,10 @@
             ?>
         </tbody>   
       </table>
+    </div>
+    <div class="hormat">
+      <p style="margin-left: 65px;">Hormat Kami,</p>
+      <p style="margin-top: 60px;">Panitia Penerimaan Peserta Didik Baru</p>
     </div>
    </div>
 </body>

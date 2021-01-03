@@ -411,7 +411,7 @@ class Managemen_test extends CI_Controller
         if(isset($_POST['id_tes'])){
             $id_tes = $_POST['id_tes'];
 
-            $dataJalur = $this->m_seleksi->getTesKonfig($id_tes);
+            $dataJalur = $this->m_seleksi->getTesKonfig($id_tes, $this->session->userdata('id_perusahaan'));
             echo json_encode($dataJalur);
         }
     }
