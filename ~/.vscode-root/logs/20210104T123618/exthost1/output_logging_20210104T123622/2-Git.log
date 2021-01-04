@@ -1,0 +1,63 @@
+Looking for git in: git
+Using git 2.25.1 from git
+> git rev-parse --git-dir
+Open repository: /opt/lampp/htdocs/project_alumni
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :application/views/v_admin/v_laporan_pelamar.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_pelamar.php
+> git cat-file -s 0c8500386e772140abc5cc15141cfc735ce204cb
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s 60a3a4e6097f67280367884a674b55008c4fce27
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :application/controllers/admin/Alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/controllers/admin/Alumni.php
+> git cat-file -s 9d25a39f8456c1d1fafb9cbd8f69735e0140a573
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :application/models/M_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/models/M_alumni.php
+> git cat-file -s e6a11e25e3d144d7dd6478754fa2f39895542850
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :application/views/v_admin/v_laporan_alumni.php
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_alumni.php
+> git cat-file -s 60a3a4e6097f67280367884a674b55008c4fce27
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template

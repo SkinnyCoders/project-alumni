@@ -62,35 +62,35 @@ class M_alumni extends CI_Model
 	}
 
 	public function getAllAlumni(){
-		return $this->db->query('SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk, alumni.foto FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE alumni.status = "aktif" ORDER BY alumni.nisn ASC')->result_array();
+		return $this->db->query('SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk, alumni.foto FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE alumni.status = "aktif" ORDER BY alumni.nisn ASC')->result_array();
 	}
 
 	public function getAlumniAllNotEmpty($jurusan, $lulus, $masuk){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND `tahun_masuk` = $masuk AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND `tahun_masuk` = $masuk AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniJurusanLulus($jurusan, $lulus){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniJurusanMasuk($jurusan, $masuk){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniLulusMasuk($lulus, $masuk){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND `tahun_lulus` = $lulus AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND `tahun_lulus` = $lulus AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniJurusan($jurusan){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE alumni.`id_jurusan` = $jurusan AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniLulus($lulus){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_lulus` = $lulus AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getAlumniMasuk($masuk){
-		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
+		return $this->db->query("SELECT alumni.nisn, alumni.nama, alumni.jenis_kelamin, jurusan.nama_jurusan, status_alumni.status, status_alumni.deskripsi, alumni.telepon, alumni.tanggal_lahir, alumni.tempat_lahir, alumni.tahun_lulus, alumni.tahun_masuk FROM `alumni` LEFT JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan LEFT JOIN status_alumni ON status_alumni.nisn=alumni.nisn WHERE `tahun_masuk` = $masuk AND alumni.status = 'aktif' ORDER BY alumni.nisn ASC")->result_array();
 	}
 
 	public function getDetailAlumni($nisn){

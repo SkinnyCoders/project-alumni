@@ -73,6 +73,7 @@ $project = explode('/', $_SERVER['REQUEST_URI'])[1];
             <th>Tahun Lulus</th>
             <th>No. Telp</th>
             <th>Status</th>
+            <th>Keterangan</th>
           </tr>
         </thead>
         <tbody>
@@ -131,6 +132,7 @@ $project = explode('/', $_SERVER['REQUEST_URI'])[1];
             <td><?php echo !empty($a['tahun_lulus'])?$a['tahun_lulus']:"Belum Diisi"?></td>
             <td><?php echo !empty($a['telepon'])?$a['telepon']:"Belum Diisi"?></td>
             <td><?php echo $status?></td>
+            <td><?php echo ucwords($a['deskripsi'])?></td>
           </tr>
             <?php 
                 endforeach;

@@ -1,6 +1,0 @@
-[2020-12-19 21:40:16.660] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/project_alumni/.vscode'
-[2020-12-19 21:40:16.831] [renderer1] [error] Network Error: Error: Network Error
-    at e.exports (/snap/code/52/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:7511)
-    at XMLHttpRequest.p.onerror (/snap/code/52/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:6478)
-[2020-12-19 21:55:08.805] [renderer1] [error] XHR failed: Error: XHR failed
-    at XMLHttpRequest.s.onerror (file:///snap/code/52/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:462:158)

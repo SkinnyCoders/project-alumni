@@ -692,3 +692,14 @@ fatal: no upstream configured for branch 'master'
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /opt/lampp/htdocs/project_alumni/application/views/v_admin/v_laporan_pelamar.php
+> git cat-file -s 0c8500386e772140abc5cc15141cfc735ce204cb
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git show --textconv :application/views/v_admin/v_laporan_pelamar.php
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
