@@ -41,15 +41,31 @@ class Dashboard extends CI_controller
             12 => "Desember"
         ];
 
-
         $sekarang = date('m');
-        $old = $sekarang - 4;
+        if($sekarang - 4 < 0){
+            $old = $sekarang - 4 + 12;
+            if($old == 9){
+                $bulan = [9,10,11,12,1];
+            }elseif($old == 10){
+                $bulan = [10,11,12,1,2];
+            }elseif($old == 11){
+                $bulan = [11,12,1,2,3];
+            }elseif($old == 12){
+                $bulan = [12,1,2,3,4];
+            }
+        }elseif($sekarang - 4 == 0){
+            $old = 1;
+            for($i = $old; $i<=$sekarang; $i++){
+                $bulan[] = $i;
+              }
+        }else{
+            $old = $sekarang - 4;
+            for($i = $old; $i<=$sekarang; $i++){
+                $bulan[] = $i;
+            }
+        }
         $tahun = date('Y');
         $hari = date('d');
-
-        for($i = $old; $i<=$sekarang; $i++){
-          $bulan[] = $i;
-        }
 
         for ($i=0; $i < count($bulan) ; $i++) { 
             $label[] = $arr_bulan[$bulan[$i]];
