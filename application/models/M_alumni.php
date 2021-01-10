@@ -37,7 +37,7 @@ class M_alumni extends CI_Model
 	}
 
 	public function getLowonganDetail($slug){
-		return $this->db->query("SELECT * FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.slug = '$slug'")->row_array();
+		return $this->db->query("SELECT lowongan.*, lowongan.deskripsi AS deskripsi_lowongan, company.* FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.slug = '$slug'")->row_array();
 	}
 
 	public function getEvent($bulan){

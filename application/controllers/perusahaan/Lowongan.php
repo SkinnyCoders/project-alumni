@@ -206,7 +206,7 @@ class Lowongan extends CI_Controller
         
         $nisn = $data['alumni']['nisn'];
 
-        $data['hasil_tes'] = $this->db->query("SELECT * FROM hasil_tes_seleksi JOIN tes_seleksi ON tes_seleksi.id_tes_seleksi=hasil_tes_seleksi.id_tes_seleksi WHERE nisn =".$nisn)->result_array();
+        $data['hasil_tes'] = $this->db->query("SELECT * FROM `job_apply` JOIN konfigurasi_tes_seleksi as konfig ON konfig.id_lowongan=job_apply.id_lowongan JOIN hasil_tes_seleksi ON hasil_tes_seleksi.id_tes_seleksi=konfig.id_tes_seleksi JOIN tes_seleksi ON tes_seleksi.id_tes_seleksi=hasil_tes_seleksi.id_tes_seleksi WHERE hasil_tes_seleksi.nisn = $nisn AND job_apply.id_job_apply=".$id_job_apply)->result_array();
 
         getViews($data, 'v_company/v_detail_pelamar');
     }

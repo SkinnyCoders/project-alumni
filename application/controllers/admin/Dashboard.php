@@ -64,6 +64,7 @@ class Dashboard extends CI_controller
                 $bulan[] = $i;
             }
         }
+        
         $tahun = date('Y');
         $hari = date('d');
 

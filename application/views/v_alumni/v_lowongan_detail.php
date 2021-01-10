@@ -60,7 +60,7 @@
                 <p class="lead">Deskripsi Pekerjaan</p>
 
                 <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
-                <?php echo $lowongan['deskripsi'] ?>
+                <?php echo $lowongan['deskripsi_lowongan'] ?>
                 </p>
             </div>
             </div>
