@@ -209,20 +209,22 @@
                         </div>
                         <div class="modal-body">
                             <form action="<?=base_url()?>admin/lowongan/rekap1" method="post">
+                            <div class="form-group">
+                                    <label for="">Perusahaan</label>
+                                    <select name="perusahaan" class="form-control select2bs4" data-placeholder="Pilih Perusahaan (Kosongkan Jika ingin semua perusahaan)" id="perusahaan_list2">
+                                        <option></option>
+                                    </select>
+                                </div>
                                 <div class="form-group">
                                     <label for="">Lowongan</label>
-                                    <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Lowongan (Kosongkan Jika ingin semua jurusan)" id="">
+                                    <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Lowongan (Kosongkan Jika ingin semua laporan)" id="lowongan">
                                         <option></option>
-                                        <?php
-                                        foreach($lowongans AS $j){
-                                            echo '<option value="'.$j['id_lowongan'].'">'.ucwords($j['posisi_pekerjaan']).'</option>';
-                                        }
-                                        ?>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Status Lamaran</label>
-                                    <select name="status" class="form-control select2bs4" data-placeholder="Pilih Status (Kosongkan Jika ingin semua jurusan)" id="">
+                                    <select name="status" class="form-control select2bs4" data-placeholder="Pilih Status (Kosongkan Jika ingin semua status lamaran)" id="">
                                         <option></option>
                                         <option value="terima">Diterima</option>
                                         <option value="tolak">Ditolak</option>
@@ -305,6 +307,66 @@
           }
       })
   })
+  </script>
+
+<script>
+  $(document).ready(function(){
+      $.ajax({
+          type : "GET",
+          url : "<?=base_url('admin/lowongan/get_perusahaan')?>",
+          dataType : "json",
+          success : function(data){
+            var html = '<option></option>';
+            var i;
+
+            for (i = 0; i < data.length; i++) {
+                html += '<option value="' + data[i].id_company + '">' + data[i].nama + '</option>'
+            }
+
+            $('#perusahaan_list2').html(html);
+          }
+      })
+  })
+  </script>
+
+<script>
+  $('#perusahaan_list2').on('change', function(){
+    var id_perusahaan = $('#perusahaan_list2').val()
+          $.ajax({
+          type : "POST",
+          url : "<?=base_url('admin/lowongan/get_lowongan_perusahaan')?>",
+          data : {'id_perusahaan' : id_perusahaan},
+          dataType : "json",
+          success : function(data){
+            var html = '<option></option>';
+            var i;
+
+            for (i = 0; i < data.length; i++) {
+                html += '<option value="' + data[i].id_lowongan + '">' + data[i].posisi_pekerjaan + '</option>'
+            }
+
+            $('#lowongan').html(html);
+          }
+      })
+  })
+  // $('#perusahaan_list2').on(function(){
+    
+  //     $.ajax({
+  //         type : "GET",
+  //         url : "<?=base_url('admin/lowongan/get_perusahaan')?>",
+  //         dataType : "json",
+  //         success : function(data){
+  //           // var html = '<option></option>';
+  //           // var i;
+
+  //           // for (i = 0; i < data.length; i++) {
+  //           //     html += '<option value="' + data[i].id_company + '">' + data[i].nama + '</option>'
+  //           // }
+
+  //           // $('#perusahaan_list2').html(html);
+  //         }
+  //     })
+  // })
   </script>
 
    <script>

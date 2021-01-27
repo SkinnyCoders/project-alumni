@@ -23,6 +23,17 @@ class Lowongan extends CI_Controller
     	getViews($data, 'v_admin/v_lowongan');
     }
 
+    public function get_lowongan_perusahaan(){
+        if(isset($_POST['id_perusahaan'])){
+            $id = $_POST['id_perusahaan'];
+
+            $lowongan = $this->db->query("SELECT * FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.status = 'verifikasi' AND lowongan.id_company = $id ORDER BY lowongan.create_at DESC
+            ")->result_array();
+
+            echo json_encode($lowongan);
+        }
+    }
+
     public function tambah()
     {
     	$data['title'] = 'Tambah Lowongan Pekerjaan';
@@ -231,6 +242,7 @@ class Lowongan extends CI_Controller
     public function rekap1(){
         $lowongan = $this->input->post('lowongan');
         $status = $this->input->post('status');
+        $perusahaan = $this->input->post('perusahaan');
 
 
         //get loowngan
@@ -239,23 +251,47 @@ class Lowongan extends CI_Controller
             $lowongan_name = $lowongan_q['posisi_pekerjaan'];
         }
 
-        if(!empty($lowongan) && !empty($status)){
+        if(!empty($lowongan) && !empty($status) && !empty($perusahaan)){
             //all 
             $data = [
                 'header' => "Lowongan $lowongan_name dan status $status",
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND job_apply.status = '$status' ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND job_apply.status = '$status' AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
             ];
-        }elseif(!empty($lowongan) ){
-            //lowongan
+        }elseif(!empty($lowongan) && !empty($perusahaan)){
+            //lowongan dan perusahaan
             $data = [
                 'header' => 'Lowongan '.$lowongan_name,
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($status) && !empty($lowongan)){
+            //lowongan dan status
+            $data = [
+                'header' => 'Semua Lowongan dan status '.$status,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' AND lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($status) && !empty($perusahaan)){
+            //perusahaan dan status
+            $data = [
+                'header' => 'Semua Lowongan dan status '.$status,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }elseif(!empty($status)){
-            //jurusan & thn lulus
+            //status
             $data = [
                 'header' => 'Semua Lowongan dan status '.$status,
                 'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($lowongan)){
+            //lowongan
+            $data = [
+                'header' => 'Semua Lowongan dan status '.$status,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+            ];
+        }elseif(!empty($perusahaan)){
+            //perusahaan
+            $data = [
+                'header' => 'Semua Lowongan dan status '.$status,
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }else{
             //kosong semua
