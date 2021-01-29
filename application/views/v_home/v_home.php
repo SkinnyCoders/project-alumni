@@ -198,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="icon">
                         <img src="<?=base_url()?>assets/uploads/file_berita/<?=$l['thumbnail']?>" alt="" style="width: 100%; height: 150px;" class="img-fluid"/>
                     </div>
-                    <h3 class="mt-3"><a href="<?=base_url()?>lowongan/detail/<?=$l['slug']?>" class="text-dark"><?=ucwords($l['posisi_pekerjaan'])?></a></h3>
+                    <h3 class="mt-3"><a href="<?=base_url()?>lowongan/detail/<?=$l['slug']?>" class="text-dark"><?=ucwords(str_replace(',',' dan ', $l['posisi_pekerjaan']))?></a></h3>
                     <small class="text-muted"><?=ucwords($l['nama'])?> - <?=ucwords($l['penempatan'])?></small>
                     <p class="mt-3"><?php echo word_limiter($l['deskripsi'], 17)?></p>
                 </div>

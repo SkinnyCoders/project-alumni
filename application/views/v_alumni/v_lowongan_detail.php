@@ -120,6 +120,19 @@
                         </div>
                       </div>
                       <div class="form-group">
+                        <label for="">Posisi yang ingin dilamar</label>
+                        <select name="posisi" class="form-control" id="">
+                          <?php
+                          $lowongans = explode(",", $lowongan['posisi_pekerjaan']);
+                          for($i=0; $i < count($lowongans); $i++){
+                            ?>
+                            <option value='<?=strtolower($lowongans[$i])?>'><?=$lowongans[$i]?></option>
+                          <?php
+                          }
+                          ?>
+                        </select>
+                      </div>
+                      <div class="form-group">
                         <label for="kelas">Contact <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" name="contact" id="posisi" placeholder="Masukkan No Telp" value="<?php echo set_value('contact'); ?>">
                         <small class="text-danger mt-2"><?= form_error('contact') ?></small>

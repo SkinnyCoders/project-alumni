@@ -164,7 +164,7 @@ if(!empty( $lowongan['berakhir'])) {
     <div class="container py-md-3">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-            <h3 class="heading mb-2"><?php echo ucwords($lowongan['posisi_pekerjaan'])?></h3>
+            <h3 class="heading mb-2"><?=ucwords(str_replace(',',' dan ', $lowongan['posisi_pekerjaan']))?></h3>
             <h4 class=" mb-3"><?php echo ucwords($lowongan['nama'])?> - <?php echo ucwords($lowongan['penempatan'])?></h4>
             <img src="<?=base_url()?>assets/uploads/file_berita/<?php echo $lowongan['thumbnail']?>" alt="" style="width: 100%; height: 400px;" class="img-fluid">
             </div>

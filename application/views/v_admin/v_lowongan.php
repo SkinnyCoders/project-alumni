@@ -56,7 +56,7 @@
                               <tr>
                                 <td><?=$no++?></td>
                                 <td><img class="brand-image" style="width: 70px; height: 70px; border-radius: 5%" src="<?= base_url('assets/uploads/file_berita/' . $lowongan['thumbnail']) ?>"></td>
-                                <td><?=ucwords($lowongan['posisi_pekerjaan'])?> - <?=ucwords($lowongan['nama'])?></td>
+                                <td><?=ucwords(str_replace(',',' dan ', $lowongan['posisi_pekerjaan']))?> - <?=ucwords($lowongan['nama'])?></td>
                                 <td><?=$lowongan['penempatan']?></td>
                                 <td><?= ucwords(word_limiter($lowongan['deskripsi'], 27))?></td>
                                 <td><?= DateTime::createFromFormat('Y-m-d', $lowongan['berakhir'])->format('d/m/Y') ?></td>
@@ -91,14 +91,15 @@
                     <div class="col-md-8">
                       <div class="form-group">
                         <label for="kelas">Posisi Pekerjaan <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>">
+                        <input type="text" data-role="tagsinput" id="posisi" name="posisi" class="form-control" placeholder="">
+                        <!-- <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>"> -->
                         <small class="text-danger mt-2"><?= form_error('kelas') ?></small>
                       </div>
                     </div>
                     <div class="col-md-4">
                     <div class="form-group">
                         <label for="kelas">Perusahaan<span class="text-danger">*</span></label>
-                        <select id="perusahaan_list" class="form-control perusahaan" name="perusahaan" style="width: 100%;" data-placeholder="Pilih Perusahaan">
+                        <select id="perusahaan_list" class="form-control perusahaan bapuk" name="perusahaan" style="width: 100%;" data-placeholder="Pilih Perusahaan">
                           <option></option>
                           
                         </select>
@@ -117,7 +118,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="tahun">Penempatan <span class="text-danger">*</span></label>
-                        <select id="provinsi" class="form-control select2bs4" name="penempatan" style="width: 100%;" data-placeholder="Pilih Penempatan">
+                        <select id="provinsi" class="form-control select2bs4 penempatan" name="penempatan" style="width: 100%;" data-placeholder="Pilih Penempatan">
                           <option></option>
                         </select>
                         <small class="text-danger mt-2"><?= form_error('penempatan') ?></small>
@@ -128,7 +129,7 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="kelas">Pengalaman Kerja <span class="text-danger">*</span></label>
-                        <select id="pengalam" class="form-control select2bs4" name="pengalaman" style="width: 100%;" data-placeholder="Pilih Pengalaman">
+                        <select id="pengalaman" class="form-control select2bs4" name="pengalaman" style="width: 100%;" data-placeholder="Pilih Pengalaman">
                           <option></option>
                           <option value="Kurang dari satu tahun">Kurang dari satu tahun</option>
                           <option value="1-3 Tahun">1-3 Tahun</option>
@@ -142,14 +143,14 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="tahun">Kemampuan <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="kemampuan" id="posisi" placeholder="Masukkan Kemampuan" value="<?php echo set_value('kemampuan'); ?>">
+                        <input type="text" class="form-control" name="kemampuan" id="kemampuan" placeholder="Masukkan Kemampuan" value="<?php echo set_value('kemampuan'); ?>">
                         <small class="text-danger mt-2"><?= form_error('kemampuan') ?></small>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="misi">Deskripsi Lowongan <span class="text-danger">*</span></label>
-                    <textarea id="misi" name="des" class="form-control" style="height: 150px;" placeholder="Masukkan Deskripsi"></textarea>
+                    <textarea id="des" name="des" class="form-control" style="height: 150px;" placeholder="Masukkan Deskripsi"></textarea>
                     <small class="text-danger mt-2"><?= form_error('des') ?></small>
                   </div>
                   <div class="row">
@@ -173,7 +174,7 @@
                                       <i class="far fa-calendar-alt"></i>
                                   </span>
                               </div>
-                              <input type="text" name="tgl_berakhir" class="form-control float-right" placeholder="Pilih Tanggal" id="datepicker">
+                              <input type="text" name="tgl_berakhir" class="form-control float-right tgl_berakhir" placeholder="Pilih Tanggal" id="datepicker">
                           </div>
                           <!-- /.input group -->
                           <small class="text-danger mt-2"><?= form_error('tgl_berakhir') ?></small>
@@ -211,7 +212,7 @@
                             <form action="<?=base_url()?>admin/lowongan/rekap1" method="post">
                             <div class="form-group">
                                     <label for="">Perusahaan</label>
-                                    <select name="perusahaan" class="form-control select2bs4" data-placeholder="Pilih Perusahaan (Kosongkan Jika ingin semua perusahaan)" id="perusahaan_list2">
+                                    <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Perusahaan (Kosongkan Jika ingin semua perusahaan)" id="perusahaan_list2">
                                         <option></option>
                                     </select>
                                 </div>
@@ -219,7 +220,6 @@
                                     <label for="">Lowongan</label>
                                     <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Lowongan (Kosongkan Jika ingin semua laporan)" id="lowongan">
                                         <option></option>
-
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -283,7 +283,7 @@
                 html += '<option value="' + data.rajaongkir.results[i].province + '">' + data.rajaongkir.results[i].province + '</option>'
             }
 
-            $('#penempatan').html(html);
+            $('#provinsi').html(html);
           }
       })
   })
@@ -334,7 +334,7 @@
     var id_perusahaan = $('#perusahaan_list2').val()
           $.ajax({
           type : "POST",
-          url : "<?=base_url('admin/lowongan/get_lowongan_perusahaan')?>",
+          url : "<?=base_url('admin/lowongan/get_lowongan_perusahaan/')?>"+id_perusahaan,
           data : {'id_perusahaan' : id_perusahaan},
           dataType : "json",
           success : function(data){
@@ -393,12 +393,16 @@
        },
        dataType: "json",
        success: function(data) {
-          $('#id_lowongan').val(data.id);     
-          $('#posisi').val(data.posisi);
-          $('#perusahaan').val(data.perusahaan);
+          $('#id_lowongan').val(data.id);   
+          $('#posisi').tagsinput('removeAll');  
+          $('#posisi').tagsinput('add', data.posisi);
           $('.tgl_berakhir').val(data.berakhir);
+          $('#gaji').val(data.gaji);
           $('#des').text(data.deskripsi);
           $('.img').attr('src', data.thumbnail);
+          $('#kemampuan').val(data.kemampuan);
+          $('#pengalaman').val(data.pengalaman).change();
+          $('.bapuk').val(data.perusahaan).change();
           $('.penempatan').val(data.penempatan).change();    
        },
      });

@@ -36,7 +36,8 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="kelas">Posisi Pekerjaan <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>">
+                    <input type="text" data-role="tagsinput" name="posisi" class="form-control" placeholder="Masukkan Posisi Pekerjaan" value="">
+                    <!-- <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>"> -->
                     <small class="text-danger mt-2"><?= form_error('kelas') ?></small>
                   </div>
                   <div class="row">

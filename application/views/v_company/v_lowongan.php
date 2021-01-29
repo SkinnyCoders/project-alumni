@@ -55,7 +55,7 @@
                               <tr>
                                 <td><?=$no++?></td>
                                 <td><img class="brand-image" style="width: 70px; height: 70px; border-radius: 5%" src="<?= base_url('assets/uploads/file_berita/' . $lowongan['thumbnail']) ?>"></td>
-                                <td><?=ucwords($lowongan['posisi_pekerjaan'])?></td>
+                                <td><?=ucwords(str_replace(',',' dan ', $lowongan['posisi_pekerjaan']))?></td>
                                 <td><?=$lowongan['penempatan']?></td>
                                 <td><?= ucwords(word_limiter($lowongan['deskripsi'], 27))?></td>
                                 <td><?= DateTime::createFromFormat('Y-m-d', $lowongan['berakhir'])->format('d/m/Y') ?></td>
@@ -91,7 +91,8 @@
                       <input type="hidden" name="id" id="id_lowongan" value="">
                       <div class="form-group">
                         <label for="kelas">Posisi Pekerjaan <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>">
+                        <input type="text" data-role="tagsinput" id="posisi" name="posisi" class="form-control" placeholder="Masukkan Posisi Pekerjaan" value="">
+                        <!-- <input type="text" class="form-control" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan" value="<?php echo set_value('kelas'); ?>"> -->
                         <small class="text-danger mt-2"><?= form_error('kelas') ?></small>
                       </div>
                       <div class="row">
@@ -256,7 +257,8 @@
        dataType: "json",
        success: function(data) {
           $('#id_lowongan').val(data.id);     
-          $('#posisi').val(data.posisi);
+          $('#posisi').tagsinput('removeAll');  
+          $('#posisi').tagsinput('add', data.posisi);
           $('#perusahaan').val(data.perusahaan);
           $('.tgl_berakhir').val(data.berakhir);
           $('#des').text(data.deskripsi);

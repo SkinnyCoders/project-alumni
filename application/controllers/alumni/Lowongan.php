@@ -35,7 +35,8 @@ class Lowongan extends CI_controller
 
 	public function apply(){
 		$this->form_validation->set_rules('lamaran','Surat Lamaran','required|trim',['required' => '{field} tidak boleh kosong']);
-        $this->form_validation->set_rules('contact','Contact','required|trim|numeric',['required' => '{field} tidak boleh kosong']);
+		$this->form_validation->set_rules('contact','Contact','required|trim|numeric',['required' => '{field} tidak boleh kosong']);
+		$this->form_validation->set_rules('posisi','Posisi','required',['required' => '{field} tidak boleh kosong']);
 		// $this->form_validation->set_rules('resume','Resume','required',['required' => '{field} tidak boleh kosong']);
 		
 		if($this->form_validation->run() == FALSE){
@@ -44,7 +45,6 @@ class Lowongan extends CI_controller
 		}else{
 			if (!empty($_FILES['resume']['name'])) {
 				$file = $this->_uploadFile();
-				
     		}else{
     			$this->session->set_flashdata('msg_failed', 'Maaf, Harap lengkapi resume apply job');
 				redirect($_SERVER['HTTP_REFERER']);
@@ -58,6 +58,7 @@ class Lowongan extends CI_controller
 					"resume" => $file,
 					"contact" => $this->input->post('contact'),
 					"cover_letter" => $this->input->post('lamaran'),
+					"posisi" => $this->input->post('posisi'),
 					"status" => "pending"
 				];
 	

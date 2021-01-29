@@ -70,7 +70,7 @@
           ?>
           <tr>
             <td><?=$no++?></td>
-            <td><?= ucwords($l['posisi_pekerjaan'])?></td>
+            <td><?= ucwords($l['posisi'])?></td>
             <td><?= ucwords($l['perusahaan'])?></td>
             <td><?= ucwords($l['penempatan'])?></td>
             <td><?=$tgl?></td>
