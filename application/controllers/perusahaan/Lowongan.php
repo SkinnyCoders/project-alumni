@@ -68,7 +68,7 @@ class Lowongan extends CI_Controller
                 'thumbnail' => $file,
     			'berakhir' => $tanggal,
                 'author' => $this->session->userdata('nama'),
-                'slug' => str_replace(",", "-", $slug),
+                'slug' => str_replace(",", "-", $slug)
     		];
 
     		if (insertData('lowongan', $data)) {

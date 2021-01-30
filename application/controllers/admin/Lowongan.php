@@ -154,7 +154,7 @@ class Lowongan extends CI_Controller
                     'thumbnail' => $file,
                     'berakhir' => $tanggal,
                     'author' => $this->session->userdata('username'),
-                    'slug' => str_replace(",", "-", $slug),
+                    'slug' => str_replace(",", "-", $slug)
                 ];
 
                 if ($this->db->update('lowongan', $data, ['id_lowongan' => $id_lowongan])) {
