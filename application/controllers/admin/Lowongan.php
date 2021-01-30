@@ -28,9 +28,16 @@ class Lowongan extends CI_Controller
             $id = $_POST['id_perusahaan'];
 
             $lowongan = $this->db->query("SELECT * FROM `lowongan` JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.status = 'verifikasi' AND lowongan.id_company = $id ORDER BY lowongan.create_at DESC
-            ")->result_array();
+            ")->row_array();
+            $posisi = $lowongan['posisi_pekerjaan'];
+            $posisi = explode(',', $posisi);
 
-            echo json_encode($lowongan);
+            for($i = 0; $i < count($posisi); $i++){
+                $data[] = [
+                    "posisi" => $posisi[$i]
+                ];
+            }
+            echo json_encode($data);
         }
     }
 
@@ -249,28 +256,28 @@ class Lowongan extends CI_Controller
 
 
         //get loowngan
-        if(!empty($lowongan)){
-            $lowongan_q = $this->db->query("SELECT * FROM lowongan WHERE id_lowongan =".$lowongan)->row_array();
-            $lowongan_name = $lowongan_q['posisi_pekerjaan'];
-        }
+        // if(!empty($lowongan)){
+        //     $lowongan_q = $this->db->query("SELECT * FROM lowongan WHERE id_lowongan =".$lowongan)->row_array();
+        //     $lowongan_name = $lowongan_q['posisi_pekerjaan'];
+        // }
 
         if(!empty($lowongan) && !empty($status) && !empty($perusahaan)){
             //all 
             $data = [
                 'header' => "Lowongan $lowongan_name dan status $status",
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.statu, job_apply.posisi AS posisis FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND job_apply.status = '$status' AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.statu, job_apply.posisi AS posisis FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.posisi = '$lowongan' AND job_apply.status = '$status' AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }elseif(!empty($lowongan) && !empty($perusahaan)){
             //lowongan dan perusahaan
             $data = [
                 'header' => 'Lowongan '.$lowongan_name,
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.posisi = '$lowongan' AND lowongan.id_company = $perusahaan ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }elseif(!empty($status) && !empty($lowongan)){
             //lowongan dan status
             $data = [
                 'header' => 'Semua Lowongan dan status '.$status,
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' AND lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.status = '$status' AND job_apply.posisi = '$lowongan' ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }elseif(!empty($status) && !empty($perusahaan)){
             //perusahaan dan status
@@ -288,7 +295,7 @@ class Lowongan extends CI_Controller
             //lowongan
             $data = [
                 'header' => 'Semua Lowongan dan status '.$status,
-                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE lowongan.id_lowongan = $lowongan ORDER BY job_apply.apply_at DESC")->result_array()
+                'alumni' => $this->db->query("SELECT alumni.nisn, alumni.nama,jurusan.nama_jurusan, alumni.jenis_kelamin, lowongan.posisi_pekerjaan, company.nama AS perusahaan, lowongan.penempatan, lowongan.gaji, job_apply.status, job_apply.posisi AS posisi FROM `job_apply` JOIN alumni ON alumni.nisn=job_apply.nisn JOIN jurusan ON jurusan.id_jurusan=alumni.id_jurusan JOIN lowongan ON lowongan.id_lowongan=job_apply.id_lowongan JOIN company ON company.id_company=lowongan.id_company WHERE job_apply.posisi = '$lowongan' ORDER BY job_apply.apply_at DESC")->result_array()
             ];
         }elseif(!empty($perusahaan)){
             //perusahaan

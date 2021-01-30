@@ -116,7 +116,7 @@ $project = explode('/', $_SERVER['REQUEST_URI'])[1];
             <td><?php echo ucwords($a['nama'])?></td>
             <td><?php echo !empty($a['nama_jurusan'])?ucwords($a['nama_jurusan']):"Belum Diisi"?></td>
             <td><?php echo $gender?></td>
-            <td><?php echo !empty($a['posisi_pekerjaan'])?ucwords($a['posisi_pekerjaan']):"Belum Diisi"?></td>
+            <td><?php echo !empty($a['posisi'])?ucwords($a['posisi']):"Belum Diisi"?></td>
             <td><?php echo !empty($a['perusahaan'])?$a['perusahaan']:"Belum Diisi"?></td>
             <td><?php echo !empty($a['penempatan'])?$a['penempatan']:"Belum Diisi"?></td>
             <td><?php echo !empty($a['gaji'])?$a['gaji']:"Belum Diisi"?></td>

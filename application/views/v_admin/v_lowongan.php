@@ -342,7 +342,7 @@
             var i;
 
             for (i = 0; i < data.length; i++) {
-                html += '<option value="' + data[i].id_lowongan + '">' + data[i].posisi_pekerjaan + '</option>'
+                html += '<option value="' + data[i].posisi + '">' + data[i].posisi + '</option>'
             }
 
             $('#lowongan').html(html);
