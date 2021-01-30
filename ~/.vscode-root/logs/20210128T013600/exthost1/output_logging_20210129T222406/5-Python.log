@@ -1,0 +1,131 @@
+User belongs to experiment group 'ShowPlayIcon - start'
+User belongs to experiment group 'ShowExtensionSurveyPrompt - control'
+User belongs to experiment group 'DebugAdapterFactory - experiment'
+User belongs to experiment group 'PtvsdWheels37 - experiment'
+User belongs to experiment group 'UseTerminalToGetActivatedEnvVars - control'
+User belongs to experiment group 'LocalZMQKernel - experiment'
+User belongs to experiment group 'CollectLSRequestTiming - control'
+User belongs to experiment group 'CollectNodeLSRequestTiming - experiment'
+User belongs to experiment group 'EnableIPyWidgets - experiment'
+User belongs to experiment group 'RunByLine - experiment'
+User belongs to experiment group 'CustomEditorSupport - control'
+User belongs to experiment group 'pythonaa'
+User belongs to experiment group 'pythonJoinMailingListVar1'
+User belongs to experiment group 'pythonSendEntireLineToREPL'
+User belongs to experiment group 'pythonInstallPylintButtonFirstcf'
+> conda --version
+> pyenv root
+> python3.7 ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3.6 ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python3 ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python2 ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> conda info --json
+> python ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+> python ~/.vscode/extensions/ms-python.python-2021.1.502429796/pythonFiles/pyvsc-run-isolated.py -c "import sys;print(sys.executable)"
+Error 2021-01-29 22:24:07: Failed to check if file needs to be fixed [EntryNotFound (FileSystemError): Unable to read file '/home/baskara/apps/tiktok/.vscode/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/home/baskara/apps/tiktok/.vscode/settings.json')
+	at _handleError (/snap/code/52/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:745:473)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async y.readText (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:9:344778)
+	at async p.doesFileNeedToBeFixed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:500280)
+	at async /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:499407
+	at async Promise.all (index 1)
+	at async p.getFilesToBeFixed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:499353)
+	at async p.updateTestSettings (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:498980)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}
+Error 2021-01-29 22:24:07: Failed to check if file needs to be fixed [EntryNotFound (FileSystemError): Unable to read file '/root/.config/Code/User/settings.json' (EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, open '/root/.config/Code/User/settings.json')
+	at _handleError (/snap/code/52/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:745:473)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async y.readText (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:9:344778)
+	at async p.doesFileNeedToBeFixed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:500280)
+	at async /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:499407
+	at async Promise.all (index 0)
+	at async p.getFilesToBeFixed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:499353)
+	at async p.updateTestSettings (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:498980)] {
+  code: 'FileNotFound',
+  name: 'EntryNotFound (FileSystemError)'
+}
+Python interpreter path: ./venv-tiktok/bin/python3
+Starting Microsoft Python language server.
+Error 2021-01-29 22:24:09: Listing Nuget Packages, Class name = d, completed in 143ms, has a falsy return value, Arg 1: "https://pvsc.blob.core.windows.net", Arg 2: "python-language-server-stable", Arg 3: "Python-Language-Server-linux-x64", Arg 4: "https://pvsc.azureedge.net", Arg 5: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Return Value: undefined [Error: getaddrinfo EAI_AGAIN pvsc.blob.core.windows.net
+	at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)] {
+  errno: 'EAI_AGAIN',
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'pvsc.blob.core.windows.net'
+}
+Error 2021-01-29 22:24:09: Get latest language server nuget package version, Class name = d, completed in 146ms, has a falsy return value, Arg 1: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Arg 2: "0.5.30", Return Value: undefined [Error: getaddrinfo EAI_AGAIN pvsc.blob.core.windows.net
+	at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)] {
+  errno: 'EAI_AGAIN',
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'pvsc.blob.core.windows.net'
+}
+Error 2021-01-29 22:24:09: Get latest version of language server, Class name = f, completed in 146ms, has a falsy return value, Arg 1: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Return Value: undefined [Error: getaddrinfo EAI_AGAIN pvsc.blob.core.windows.net
+	at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)] {
+  errno: 'EAI_AGAIN',
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'pvsc.blob.core.windows.net'
+}
+Error 2021-01-29 22:24:09: Get language server folder name, Class name = f, completed in 263ms, has a falsy return value, Arg 1: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Return Value: undefined [TypeError: Cannot read property 'version' of undefined
+	at u.getLanguageServerFolderName (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:9:625901)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)]
+Error 2021-01-29 22:24:09: Failed to activate language server, Class name = a, completed in 265ms, has a falsy return value, Arg 1: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Arg 2: {"architecture":3,"path":"/home/baskara/apps/tiktok/venv-tiktok/bin/python3","version":{"options":{"loose":false,"includePrerelease":false},"loose":false,"raw":"3.8.5-final","major":3,"minor":8,"patch":5,"prerelease":["final"],"build":[],"version":"3.8.5-final"},"sysVersion":"3.8.5 (default, Jul 28 2020, 12:59:40) \n[GCC 9.3.0]","sysPrefix":"/home/baskara/apps/tiktok/venv-tiktok","fileHash":"37787de17180062cc2603e4680be67f3b31b2a616ab911d5d8985c4e48c9d0b6cd0e0ca211058c16bd808e0a4b8c2f0f3206d4e6bc178133a222fe008149ec36","envType":"Venv","envName":"venv-tiktok","displayName":"Python 3.8.5 64-bit ('venv-tiktok': venv)"}, Return Value: undefined [TypeError: Cannot read property 'version' of undefined
+	at u.getLanguageServerFolderName (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:9:625901)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)]
+We encountered an issue starting the language server. Reverting to Jedi language engine. Check the Python output panel for details.
+Error 2021-01-29 22:24:09: Failed to activate a workspace, Class name = y, completed in 2620ms, has a falsy return value, Arg 1: <Uri:/home/baskara/apps/tiktok/tiktok.py>, Return Value: undefined [Error: No matching bindings found for serviceIdentifier: Symbol(ILanguageServerActivator)
+ Symbol(ILanguageServerActivator) - named: Jedi 
+
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261173
+	at m (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261470)
+	at e (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261961)
+	at Object.t.plan (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:262624)
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259208
+	at e._get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259117)
+	at e.getTagged (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:257920)
+	at e.getNamed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:258012)
+	at a.get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:938360)
+	at w.createRefCountedServer (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:31035)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async w.activate (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:28677)
+	at async Promise.all (index 4)
+	at async y.activateWorkspace (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:23759)]
+Error 2021-01-29 22:24:09: Failure during activation. [Error: No matching bindings found for serviceIdentifier: Symbol(ILanguageServerActivator)
+ Symbol(ILanguageServerActivator) - named: Jedi 
+
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261173
+	at m (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261470)
+	at e (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261961)
+	at Object.t.plan (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:262624)
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259208
+	at e._get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259117)
+	at e.getTagged (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:257920)
+	at e.getNamed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:258012)
+	at a.get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:938360)
+	at w.createRefCountedServer (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:31035)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async w.activate (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:28677)
+	at async Promise.all (index 4)
+	at async y.activateWorkspace (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:23759)]
+Error 2021-01-29 22:24:09: sendStartupTelemetry() failed. [Error: No matching bindings found for serviceIdentifier: Symbol(ILanguageServerActivator)
+ Symbol(ILanguageServerActivator) - named: Jedi 
+
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261173
+	at m (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261470)
+	at e (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:261961)
+	at Object.t.plan (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:262624)
+	at /root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259208
+	at e._get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:259117)
+	at e.getTagged (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:257920)
+	at e.getNamed (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:44:258012)
+	at a.get (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:59:938360)
+	at w.createRefCountedServer (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:31035)
+	at processTicksAndRejections (internal/process/task_queues.js:94:5)
+	at async w.activate (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:28677)
+	at async Promise.all (index 4)
+	at async y.activateWorkspace (/root/.vscode/extensions/ms-python.python-2021.1.502429796/out/client/extension.js:52:23759)]

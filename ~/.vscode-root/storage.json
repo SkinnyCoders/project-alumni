@@ -2,6 +2,7 @@
     "telemetry.machineId": "ee7d32a40cb3104931a1a39ffce0f67778de089e4ff93d8b8c4c2b280dd1e15d",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/baskara/apps/tiktok",
             "file:///opt/lampp/htdocs/project_alumni"
         ],
         "files2": []
@@ -40,7 +41,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -49,7 +51,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/opt/lampp/htdocs/project_alumni",
+                                        "fsPath": "/home/baskara/apps/tiktok",
+                                        "external": "file:///home/baskara/apps/tiktok",
+                                        "path": "/home/baskara/apps/tiktok",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/baskara/apps/tiktok"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///opt/lampp/htdocs/project_alumni",
                                         "path": "/opt/lampp/htdocs/project_alumni",
                                         "scheme": "file"
@@ -98,8 +111,7 @@
                     },
                     {
                         "id": "workbench.action.files.saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -393,7 +405,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1456,8 +1469,8 @@
     "themeBackground": "#1f1f1f",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///opt/lampp/htdocs/project_alumni",
-            "backupPath": "/opt/lampp/htdocs/project_alumni/~/.vscode-root/Backups/bd9217fecb2ae7449e90a292ed734084",
+            "folder": "file:///home/baskara/apps/tiktok",
+            "backupPath": "/opt/lampp/htdocs/project_alumni/~/.vscode-root/Backups/5b7ded8ed7a91a378a20f08cd866c1f6",
             "uiState": {
                 "mode": 0,
                 "x": 0,
@@ -1467,5 +1480,6 @@
             }
         },
         "openedWindows": []
-    }
+    },
+    "pickerWorkingDir": "/home/baskara/apps"
 }

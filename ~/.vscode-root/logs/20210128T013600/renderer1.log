@@ -1,1 +1,6 @@
 [2021-01-28 01:36:08.155] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/opt/lampp/htdocs/project_alumni/.vscode'
+[2021-01-29 22:11:21.574] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/baskara/apps/tiktok/.vscode'
+[2021-01-29 22:24:03.446] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/baskara/apps/tiktok/.vscode'
+[2021-01-29 22:24:03.446] [renderer1] [error] Network Error: Error: Network Error
+    at e.exports (/snap/code/52/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:7511)
+    at XMLHttpRequest.p.onerror (/snap/code/52/usr/share/code/resources/app/node_modules.asar/tas-client-umd/lib/tas-client-umd.js:1:6478)
