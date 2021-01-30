@@ -212,7 +212,7 @@
                             <form action="<?=base_url()?>admin/lowongan/rekap1" method="post">
                             <div class="form-group">
                                     <label for="">Perusahaan</label>
-                                    <select name="lowongan" class="form-control select2bs4" data-placeholder="Pilih Perusahaan (Kosongkan Jika ingin semua perusahaan)" id="perusahaan_list2">
+                                    <select name="perusahaan" class="form-control select2bs4" data-placeholder="Pilih Perusahaan (Kosongkan Jika ingin semua perusahaan)" id="perusahaan_list2">
                                         <option></option>
                                     </select>
                                 </div>
